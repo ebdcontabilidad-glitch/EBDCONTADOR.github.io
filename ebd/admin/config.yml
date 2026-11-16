@@ -1,0 +1,99 @@
+# =====================================================================
+# Panel de administración de EBD (Sveltia CMS)
+# ÚNICO CAMBIO OBLIGATORIO (paso 4 de la GUÍA): cambie USUARIO por su
+# nombre de usuario de GitHub en las DOS posiciones de la línea "repo".
+# Solo puede entrar quien tenga una llave (token) con permiso de escritura
+# sobre este repositorio.
+# =====================================================================
+backend:
+  name: github
+  repo: USUARIO/USUARIO.github.io
+  branch: main
+  commit_messages:
+    create: 'Blog: nuevo «{{slug}}»'
+    update: 'Contenido: actualiza «{{slug}}»'
+    delete: 'Contenido: elimina «{{slug}}»'
+
+site_url: /
+display_url: /
+logo_url: /img/icono-512.png
+
+media_folder: images/blog
+public_folder: /images/blog
+
+collections:
+  # ---------------- BLOG ----------------
+  - name: blog
+    label: Blog
+    label_singular: Artículo
+    description: Artículos de opinión, análisis y guías fiscales de la firma. Al guardar, aparecen en el sitio en 1 o 2 minutos.
+    folder: content/blog
+    format: json
+    extension: json
+    create: true
+    delete: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{titulo}}'
+    sortable_fields: [fecha, titulo]
+    fields:
+      - { label: Título, name: titulo, widget: string }
+      - { label: Fecha de publicación, name: fecha, widget: datetime }
+      - { label: Autor, name: autor, widget: string, default: 'EBD Contadores Públicos' }
+      - { label: Extracto (resumen de 1 o 2 líneas para la tarjeta), name: extracto, widget: text, required: false }
+      - { label: Etiquetas, name: etiquetas, widget: list, required: false, hint: 'Ej.: RESICO, SAT, Personas físicas' }
+      - { label: Imagen de portada, name: portada, widget: image, required: false }
+      - { label: Publicado, name: publicado, widget: boolean, default: true, hint: 'Apáguelo para guardar como borrador sin mostrarlo en el sitio' }
+      - { label: Contenido, name: body, widget: markdown }
+
+  # ---------------- DATOS DEL DESPACHO ----------------
+  - name: ajustes
+    label: Ajustes del sitio
+    files:
+      - name: sitio
+        label: Datos del despacho
+        file: data/sitio.json
+        format: json
+        fields:
+          - label: Contacto
+            name: contacto
+            widget: object
+            fields:
+              - { label: Teléfono, name: telefono, widget: string, required: false, hint: 'Ej.: +52 55 0000 0000' }
+              - { label: WhatsApp (solo números con 52), name: whatsapp, widget: string, required: false, hint: 'Ej.: 5215500000000' }
+              - { label: Correo, name: correo, widget: string, required: false }
+              - { label: Dirección, name: direccion, widget: string, required: false }
+              - { label: Horario, name: horario, widget: string, required: false }
+          - label: Redes sociales (dirección completa)
+            name: redes
+            widget: object
+            fields:
+              - { label: LinkedIn, name: linkedin, widget: string, required: false }
+              - { label: Instagram, name: instagram, widget: string, required: false }
+              - { label: Facebook, name: facebook, widget: string, required: false }
+              - { label: X (Twitter), name: x, widget: string, required: false }
+              - { label: YouTube, name: youtube, widget: string, required: false }
+          - label: Cédulas profesionales
+            name: cedulas
+            widget: list
+            required: false
+            fields:
+              - { label: Nombre, name: nombre, widget: string }
+              - { label: Número de cédula, name: cedula, widget: string }
+          - { label: Dirección del Portal de Clientes, name: portalUrl, widget: string, required: false }
+          - { label: Llave del formulario de contacto (Web3Forms), name: formKey, widget: string, required: false, hint: 'La recibe por correo en web3forms.com (paso 7 de la GUÍA). Sin ella, el formulario abre WhatsApp o el correo.' }
+
+      - name: reformas
+        label: Consulta de Leyes · últimas reformas
+        file: data/reformas.json
+        format: json
+        fields:
+          - label: Reformas
+            name: reformas
+            widget: list
+            required: false
+            summary: '{{sigla}} {{estado}} · {{fecha}}'
+            fields:
+              - { label: Sigla de la ley (ej. CFF, LISR, CF, LI), name: sigla, widget: string }
+              - { label: Entidad (vacío si es federal), name: estado, widget: string, required: false, hint: 'Escriba el nombre igual que en el sitio, ej. Jalisco, Ciudad de México' }
+              - { label: Fecha de la última reforma, name: fecha, widget: datetime }
+              - { label: Cambios recientes, name: nota, widget: text, required: false }

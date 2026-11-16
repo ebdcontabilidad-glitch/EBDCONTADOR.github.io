@@ -1,0 +1,20 @@
+{
+  "generadoEn": "2026-11-16T02:49:06.451Z",
+  "posts": [
+    {
+      "slug": "2026-11-15-resico-como-se-calcula-el-isr-mensual",
+      "titulo": "RESICO para personas físicas: cómo se calcula el ISR de cada mes",
+      "fecha": "2026-11-15T00:00:00.000Z",
+      "autor": "EBD Contadores Públicos",
+      "extracto": "La tasa va del 1% al 2.5% y se aplica sobre todo lo cobrado en el mes, sin deducciones. Le explicamos la tabla, la retención del 1.25% y los errores más comunes.",
+      "etiquetas": [
+        "RESICO",
+        "Personas físicas",
+        "ISR"
+      ],
+      "portada": "",
+      "minutos": 2,
+      "cuerpo": "El Régimen Simplificado de Confianza (RESICO) es una opción para personas físicas con actividad empresarial, servicios profesionales o arrendamiento cuyos ingresos no rebasen **$3,500,000 al año**. Su atractivo es una tasa de ISR baja; su trampa, que funciona distinto a como muchos suponen.\n\n## La tabla mensual (art. 113-E de la LISR)\n\n| Ingresos cobrados en el mes, hasta | Tasa |\n|---|---|\n| $25,000.00 | 1.00% |\n| $50,000.00 | 1.10% |\n| $83,333.33 | 1.50% |\n| $208,333.33 | 2.00% |\n| $3,500,000.00 | 2.50% |\n\nEsta tabla está escrita en la propia ley, no en la Resolución Miscelánea, por lo que no se actualiza por inflación cada año.\n\n## Tres reglas que conviene tener claras\n\n**1. La tasa se aplica al total, no por tramos.** Si en el mes cobró $50,000, paga 1.10% de todo; si cobró $50,001, paga 1.50% de todo. No es una tarifa progresiva como la de sueldos.\n\n**2. No hay deducciones.** El impuesto se calcula sobre los ingresos efectivamente cobrados y amparados con CFDI, sin restar gastos del negocio ni deducciones personales. La tasa reducida ocupa su lugar.\n\n**3. Las personas morales le retienen 1.25%.** Cuando factura a una empresa, esta le retiene el 1.25% del pago (sin IVA), y esa retención se resta del ISR del mes.\n\n## Un ejemplo\n\nUna consultora cobra $80,000 en el mes, sin IVA. Le corresponde la tasa de 1.50%: su ISR es de **$1,200**. Si $60,000 de esos cobros vinieron de personas morales, ya le retuvieron $750, de modo que paga $450 en su declaración mensual.\n\n## ¿Cuándo no conviene RESICO?\n\nSi sus gastos reales son altos en proporción a sus ingresos, el régimen general de actividad empresarial —donde sí deduce— puede resultar más barato. También hay supuestos que lo excluyen, como ser socio de una persona moral o rebasar el tope anual.\n\nAntes de elegir o cambiar de régimen, vale la pena hacer la comparación con sus números reales. Puede estimar su pago con nuestra [calculadora RESICO](#/calculadora) o [agendar una asesoría](#/contacto) para revisarlo con nosotros.\n\n*Este artículo es informativo y no sustituye una asesoría profesional. Verifique siempre las disposiciones vigentes.*"
+    }
+  ]
+}

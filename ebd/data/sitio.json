@@ -1,0 +1,19 @@
+{
+  "contacto": {
+    "telefono": "",
+    "whatsapp": "",
+    "correo": "",
+    "direccion": "",
+    "horario": "Lunes a viernes, 9:00 a 18:00 h"
+  },
+  "redes": {
+    "linkedin": "",
+    "instagram": "",
+    "facebook": "",
+    "x": "",
+    "youtube": ""
+  },
+  "cedulas": [],
+  "portalUrl": "",
+  "formKey": ""
+}
