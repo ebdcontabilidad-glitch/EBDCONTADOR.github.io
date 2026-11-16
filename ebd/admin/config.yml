@@ -7,7 +7,7 @@
 # =====================================================================
 backend:
   name: github
-  repo: USUARIO/USUARIO.github.io
+  repo: EBDCONTADOR/EBDCONTADOR.github.io
   branch: main
   commit_messages:
     create: 'Blog: nuevo «{{slug}}»'
